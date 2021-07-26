@@ -1,18 +1,18 @@
 -------------                                                      -------------
--------------              Гуенко Руслан Леонидович                -------------
--------------   СБЕР Цифровой мониторинг РЦКМ «Санкт Петербург»    -------------
+-------------              Р“СѓРµРЅРєРѕ Р СѓСЃР»Р°РЅ Р›РµРѕРЅРёРґРѕРІРёС‡                -------------
+-------------   РЎР‘Р•Р  Р¦РёС„СЂРѕРІРѕР№ РјРѕРЅРёС‚РѕСЂРёРЅРі Р Р¦РљРњ В«РЎР°РЅРєС‚ РџРµС‚РµСЂР±СѓСЂРіВ»    -------------
 -------------                  +7 (918) 5201326                    -------------
 -------------                  rus27@rambler.ru                    -------------
--------------         СБЕР: Guenko.Ru.Le@omega.sbrf.ru             -------------
+-------------         РЎР‘Р•Р : Guenko.Ru.Le@omega.sbrf.ru             -------------
 -------------                                                      -------------
--------------               Пилот Курсовой работы                  -------------
--------------  в рамках проекта ПЕРЕЗАПУСК 2.0 Школы PL/SQL Сбера  -------------
--------------           на тему «Кадровая служба СБЕРа»            -------------
+-------------               РџРёР»РѕС‚ РљСѓСЂСЃРѕРІРѕР№ СЂР°Р±РѕС‚С‹                  -------------
+-------------  РІ СЂР°РјРєР°С… РїСЂРѕРµРєС‚Р° РџР•Р Р•Р—РђРџРЈРЎРљ 2.0 РЁРєРѕР»С‹ PL/SQL РЎР±РµСЂР°  -------------
+-------------           РЅР° С‚РµРјСѓ В«РљР°РґСЂРѕРІР°СЏ СЃР»СѓР¶Р±Р° РЎР‘Р•Р Р°В»            -------------
 -------------                                                      -------------
--------------                    Версия 2.1                        -------------
+-------------                    Р’РµСЂСЃРёСЏ 2.1                        -------------
 -------------                                                      -------------
 
---Первоначальное удаление всех таблиц
+--РџРµСЂРІРѕРЅР°С‡Р°Р»СЊРЅРѕРµ СѓРґР°Р»РµРЅРёРµ РІСЃРµС… С‚Р°Р±Р»РёС†
 
 DROP TABLE dogovor;
 DROP TABLE sotrudnik;
@@ -25,7 +25,7 @@ DROP TABLE peremeshenie;
 DROP TABLE uvolnenie;
 
 --
--- Создание таблицы сведений о сотрудниках:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…:
 --
 CREATE TABLE sotrudnik (
     trdognumb  NUMBER,
@@ -37,46 +37,46 @@ CREATE TABLE sotrudnik (
 );
 
 --
--- Заполнение таблицы сведений о сотрудниках:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…:
 --
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10000, 21234, 'Артемова Анна Игоревна', '2456001998', 'женский ', '20.10.70');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10001, 14568, 'Филимонов Филипп Игоревич', '2006657904', 'мужской ', '21.10.80');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10002, 12367, 'Богданов Валентин Васильевич', '3009567489', 'мужской ', '03.11.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10003, 45678, 'Карпов Олег Геннадьевич', '2007890678', 'мужской ', '11.06.79');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10004, 34789, 'Атомов Алексей Алексеевич', '4009789634', 'мужской ', '13.11.84');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10005, 12999, 'Протасова Инна Викторовна', '6789575567', 'женский ', '07.11.67');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10006, 13948, 'Грачевский Андрей Михайлович', '3008678490', 'мужской ', '09.08.81');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10007, 16789, 'Бубликов Александр Александрович', '4007789345', 'мужской ', '01.01.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10008, 20976, 'Иванов Иван Иванович', '4005567899', 'мужской ', '02.03.77');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10009, 27688, 'Петрова Галина Петровна', '2007567890', 'женский ', '04.06.60');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10010, 48902, 'Викторова Марина Антоновна', '6008567789', 'женский ', '05.07.57');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10011, 12989, 'Афанасьев Олег Олегович', '6009567456', 'мужской ', '18.07.59');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (12570, 18645, 'Денисов Денис Денисовия', '3957059274', 'мужской ', '05.12.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (12694, 25582, 'Бдан Ксиань Чонг', '9531623698', 'женский ', '12.12.70');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (15776, 75502, 'Терехина Инна Васильевна', '3182471342', 'женский ', '05.09.67');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (15896, 11238, 'Пасейчук Павел Павлович', '8403146364', 'мужской ', '12.12.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (18856, 20181, 'Крысов Кирилл Кириллович', '5730983232', 'мужской ', '10.12.68');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (19144, 93231, 'Помарова Юлия Сергеевна', '3854102863', 'женский ', '10.10.56');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (20505, 94687, 'Каркасенко Карась Петрович', '9575829273', 'мужской ', '11.11.66');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (20965, 35821, 'Вавилов Павел Павлович', '3863165916', 'мужской ', '14.03.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (22081, 43366, 'Слесарь Карп Карпович', '8118974203', 'мужской ', '17.08.70');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (26027, 83245, 'Картеньев Игорь Игоревич', '215744408', 'мужской ', '13.11.75');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (28402, 60834, 'Аннюк Карл Карпович', '8993824628', 'мужской ', '14.11.78');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (28965, 97560, 'Олегова Оксана Олеговна', '9689189596', 'женский ', '16.05.70');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (29206, 17321, 'Парс Валенитина Карповна', '4119040089', 'женский ', '13.11.72');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (29744, 91769, 'Паскаль Анна Павловна', '3221583897', 'женский ', '13.11.80');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (35329, 37130, 'Ватт Петр Петрович', '4408467799', 'мужской ', '13.11.87');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (35915, 11908, 'Тесла Николай Олегович', '4641171657', 'женский ', '13.11.88');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (36246, 37978, 'Ом Александр Карпович', '6997079694', 'женский ', '13.11.90');
-insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (37192, 65651, 'Омар Алексей Игоревич', '3133640632', 'мужской ', '13.11.88');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10000, 21234, 'РђСЂС‚РµРјРѕРІР° РђРЅРЅР° РРіРѕСЂРµРІРЅР°', '2456001998', 'Р¶РµРЅСЃРєРёР№ ', '20.10.70');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10001, 14568, 'Р¤РёР»РёРјРѕРЅРѕРІ Р¤РёР»РёРїРї РРіРѕСЂРµРІРёС‡', '2006657904', 'РјСѓР¶СЃРєРѕР№ ', '21.10.80');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10002, 12367, 'Р‘РѕРіРґР°РЅРѕРІ Р’Р°Р»РµРЅС‚РёРЅ Р’Р°СЃРёР»СЊРµРІРёС‡', '3009567489', 'РјСѓР¶СЃРєРѕР№ ', '03.11.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10003, 45678, 'РљР°СЂРїРѕРІ РћР»РµРі Р“РµРЅРЅР°РґСЊРµРІРёС‡', '2007890678', 'РјСѓР¶СЃРєРѕР№ ', '11.06.79');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10004, 34789, 'РђС‚РѕРјРѕРІ РђР»РµРєСЃРµР№ РђР»РµРєСЃРµРµРІРёС‡', '4009789634', 'РјСѓР¶СЃРєРѕР№ ', '13.11.84');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10005, 12999, 'РџСЂРѕС‚Р°СЃРѕРІР° РРЅРЅР° Р’РёРєС‚РѕСЂРѕРІРЅР°', '6789575567', 'Р¶РµРЅСЃРєРёР№ ', '07.11.67');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10006, 13948, 'Р“СЂР°С‡РµРІСЃРєРёР№ РђРЅРґСЂРµР№ РњРёС…Р°Р№Р»РѕРІРёС‡', '3008678490', 'РјСѓР¶СЃРєРѕР№ ', '09.08.81');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10007, 16789, 'Р‘СѓР±Р»РёРєРѕРІ РђР»РµРєСЃР°РЅРґСЂ РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡', '4007789345', 'РјСѓР¶СЃРєРѕР№ ', '01.01.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10008, 20976, 'РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡', '4005567899', 'РјСѓР¶СЃРєРѕР№ ', '02.03.77');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10009, 27688, 'РџРµС‚СЂРѕРІР° Р“Р°Р»РёРЅР° РџРµС‚СЂРѕРІРЅР°', '2007567890', 'Р¶РµРЅСЃРєРёР№ ', '04.06.60');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10010, 48902, 'Р’РёРєС‚РѕСЂРѕРІР° РњР°СЂРёРЅР° РђРЅС‚РѕРЅРѕРІРЅР°', '6008567789', 'Р¶РµРЅСЃРєРёР№ ', '05.07.57');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (10011, 12989, 'РђС„Р°РЅР°СЃСЊРµРІ РћР»РµРі РћР»РµРіРѕРІРёС‡', '6009567456', 'РјСѓР¶СЃРєРѕР№ ', '18.07.59');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (12570, 18645, 'Р”РµРЅРёСЃРѕРІ Р”РµРЅРёСЃ Р”РµРЅРёСЃРѕРІРёСЏ', '3957059274', 'РјСѓР¶СЃРєРѕР№ ', '05.12.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (12694, 25582, 'Р‘РґР°РЅ РљСЃРёР°РЅСЊ Р§РѕРЅРі', '9531623698', 'Р¶РµРЅСЃРєРёР№ ', '12.12.70');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (15776, 75502, 'РўРµСЂРµС…РёРЅР° РРЅРЅР° Р’Р°СЃРёР»СЊРµРІРЅР°', '3182471342', 'Р¶РµРЅСЃРєРёР№ ', '05.09.67');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (15896, 11238, 'РџР°СЃРµР№С‡СѓРє РџР°РІРµР» РџР°РІР»РѕРІРёС‡', '8403146364', 'РјСѓР¶СЃРєРѕР№ ', '12.12.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (18856, 20181, 'РљСЂС‹СЃРѕРІ РљРёСЂРёР»Р» РљРёСЂРёР»Р»РѕРІРёС‡', '5730983232', 'РјСѓР¶СЃРєРѕР№ ', '10.12.68');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (19144, 93231, 'РџРѕРјР°СЂРѕРІР° Р®Р»РёСЏ РЎРµСЂРіРµРµРІРЅР°', '3854102863', 'Р¶РµРЅСЃРєРёР№ ', '10.10.56');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (20505, 94687, 'РљР°СЂРєР°СЃРµРЅРєРѕ РљР°СЂР°СЃСЊ РџРµС‚СЂРѕРІРёС‡', '9575829273', 'РјСѓР¶СЃРєРѕР№ ', '11.11.66');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (20965, 35821, 'Р’Р°РІРёР»РѕРІ РџР°РІРµР» РџР°РІР»РѕРІРёС‡', '3863165916', 'РјСѓР¶СЃРєРѕР№ ', '14.03.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (22081, 43366, 'РЎР»РµСЃР°СЂСЊ РљР°СЂРї РљР°СЂРїРѕРІРёС‡', '8118974203', 'РјСѓР¶СЃРєРѕР№ ', '17.08.70');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (26027, 83245, 'РљР°СЂС‚РµРЅСЊРµРІ РРіРѕСЂСЊ РРіРѕСЂРµРІРёС‡', '215744408', 'РјСѓР¶СЃРєРѕР№ ', '13.11.75');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (28402, 60834, 'РђРЅРЅСЋРє РљР°СЂР» РљР°СЂРїРѕРІРёС‡', '8993824628', 'РјСѓР¶СЃРєРѕР№ ', '14.11.78');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (28965, 97560, 'РћР»РµРіРѕРІР° РћРєСЃР°РЅР° РћР»РµРіРѕРІРЅР°', '9689189596', 'Р¶РµРЅСЃРєРёР№ ', '16.05.70');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (29206, 17321, 'РџР°СЂСЃ Р’Р°Р»РµРЅРёС‚РёРЅР° РљР°СЂРїРѕРІРЅР°', '4119040089', 'Р¶РµРЅСЃРєРёР№ ', '13.11.72');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (29744, 91769, 'РџР°СЃРєР°Р»СЊ РђРЅРЅР° РџР°РІР»РѕРІРЅР°', '3221583897', 'Р¶РµРЅСЃРєРёР№ ', '13.11.80');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (35329, 37130, 'Р’Р°С‚С‚ РџРµС‚СЂ РџРµС‚СЂРѕРІРёС‡', '4408467799', 'РјСѓР¶СЃРєРѕР№ ', '13.11.87');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (35915, 11908, 'РўРµСЃР»Р° РќРёРєРѕР»Р°Р№ РћР»РµРіРѕРІРёС‡', '4641171657', 'Р¶РµРЅСЃРєРёР№ ', '13.11.88');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (36246, 37978, 'РћРј РђР»РµРєСЃР°РЅРґСЂ РљР°СЂРїРѕРІРёС‡', '6997079694', 'Р¶РµРЅСЃРєРёР№ ', '13.11.90');
+insert into sotrudnik (trdognumb, tabnumb, fio, pasport, pol, data_rozhd) values (37192, 65651, 'РћРјР°СЂ РђР»РµРєСЃРµР№ РРіРѕСЂРµРІРёС‡', '3133640632', 'РјСѓР¶СЃРєРѕР№ ', '13.11.88');
 
 --
--- Вывод всех полейтаблицы сведений о сотрудниках:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…:
 --
 select * from sotrudnik;
 
 --
--- Создание таблицы сведений о трудовых договорах:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ С‚СЂСѓРґРѕРІС‹С… РґРѕРіРѕРІРѕСЂР°С…:
 --
 CREATE TABLE dogovor (
     trdognumb     NUMBER,
@@ -92,18 +92,18 @@ CREATE TABLE dogovor (
 );
 
 --
--- Заполнение таблицы сведений о трудовых договорах:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ С‚СЂСѓРґРѕРІС‹С… РґРѕРіРѕРІРѕСЂР°С…:
 --
-insert into dogovor (trdognumb, innrabotodat, dolgnost, datadogov, nachalodeist, okonchdeist, oklad, otdel, isputsrok, srokwork) values (10000, 12345, 'Программист', '01.12.09', '02.12.09', '12.12.10', 15000, 'ИТ', 0, 0);
-insert into dogovor (trdognumb, innrabotodat, dolgnost, datadogov, nachalodeist, okonchdeist, oklad, otdel, isputsrok, srokwork) values (10002, 12345, 'Программист', '03.10.00', '04.10.00', '01.01.99', 20000, 'ИТ', 0, 0);
+insert into dogovor (trdognumb, innrabotodat, dolgnost, datadogov, nachalodeist, okonchdeist, oklad, otdel, isputsrok, srokwork) values (10000, 12345, 'РџСЂРѕРіСЂР°РјРјРёСЃС‚', '01.12.09', '02.12.09', '12.12.10', 15000, 'РРў', 0, 0);
+insert into dogovor (trdognumb, innrabotodat, dolgnost, datadogov, nachalodeist, okonchdeist, oklad, otdel, isputsrok, srokwork) values (10002, 12345, 'РџСЂРѕРіСЂР°РјРјРёСЃС‚', '03.10.00', '04.10.00', '01.01.99', 20000, 'РРў', 0, 0);
 
 --
--- Вывод всех полей таблицы сведений о трудовых договорах:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ С‚СЂСѓРґРѕРІС‹С… РґРѕРіРѕРІРѕСЂР°С…:
 --
 select * from dogovor;
 
 --
--- Создание таблицы сведений об увольнении:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ РѕР± СѓРІРѕР»СЊРЅРµРЅРёРё:
 --
 CREATE TABLE uvolnenie (
     tabnumb                     NUMBER,
@@ -114,28 +114,28 @@ CREATE TABLE uvolnenie (
 );
 
 --
--- Заполение таблицы сведений об увольнении:
+-- Р—Р°РїРѕР»РµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ РѕР± СѓРІРѕР»СЊРЅРµРЅРёРё:
 --
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (21234, 100001, '13.12.10', 'истечение срока действия договора', '12.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (13948, 100002, '09.11.10', 'истечение срока действия договора', '10.11.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (18645, 100003, '20.12.10', 'истечение срока действия договора', '19.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (3980, 100004, '19.12.10', 'по собственному желанию', '19.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (4817, 100005, '19.12.10', 'недостаточная квалификация', '19.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (10661, 100006, '19.12.10', 'недостаточная квалификация', '19.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (11238, 100007, '13.12.10', 'несоблюдение устава компании', '14.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (10661, 100008, '14.12.10', 'несоблюдение устава компании', '14.12.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (27688, 100009, '02.01.10', 'неоднократные опоздания', '02.01.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (33404, 100010, '01.11.10', 'неоднократный безосновательный невыход на работу', '01.11.10');
-insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (35821, 100011, '01.01.10', 'неоднократный безосновательный невыход на работу', '01.01.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (21234, 100001, '13.12.10', 'РёСЃС‚РµС‡РµРЅРёРµ СЃСЂРѕРєР° РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР°', '12.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (13948, 100002, '09.11.10', 'РёСЃС‚РµС‡РµРЅРёРµ СЃСЂРѕРєР° РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР°', '10.11.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (18645, 100003, '20.12.10', 'РёСЃС‚РµС‡РµРЅРёРµ СЃСЂРѕРєР° РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР°', '19.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (3980, 100004, '19.12.10', 'РїРѕ СЃРѕР±СЃС‚РІРµРЅРЅРѕРјСѓ Р¶РµР»Р°РЅРёСЋ', '19.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (4817, 100005, '19.12.10', 'РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅР°СЏ РєРІР°Р»РёС„РёРєР°С†РёСЏ', '19.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (10661, 100006, '19.12.10', 'РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅР°СЏ РєРІР°Р»РёС„РёРєР°С†РёСЏ', '19.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (11238, 100007, '13.12.10', 'РЅРµСЃРѕР±Р»СЋРґРµРЅРёРµ СѓСЃС‚Р°РІР° РєРѕРјРїР°РЅРёРё', '14.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (10661, 100008, '14.12.10', 'РЅРµСЃРѕР±Р»СЋРґРµРЅРёРµ СѓСЃС‚Р°РІР° РєРѕРјРїР°РЅРёРё', '14.12.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (27688, 100009, '02.01.10', 'РЅРµРѕРґРЅРѕРєСЂР°С‚РЅС‹Рµ РѕРїРѕР·РґР°РЅРёСЏ', '02.01.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (33404, 100010, '01.11.10', 'РЅРµРѕРґРЅРѕРєСЂР°С‚РЅС‹Р№ Р±РµР·РѕСЃРЅРѕРІР°С‚РµР»СЊРЅС‹Р№ РЅРµРІС‹С…РѕРґ РЅР° СЂР°Р±РѕС‚Сѓ', '01.11.10');
+insert into uvolnenie (tabnumb, pricasnumbuvoln, dataprikasauvoln, osnovanie, dataprekrdeistviyadogovora) values (35821, 100011, '01.01.10', 'РЅРµРѕРґРЅРѕРєСЂР°С‚РЅС‹Р№ Р±РµР·РѕСЃРЅРѕРІР°С‚РµР»СЊРЅС‹Р№ РЅРµРІС‹С…РѕРґ РЅР° СЂР°Р±РѕС‚Сѓ', '01.01.10');
 
 --
--- Вывод всех полей таблицы сведений об увольнении:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ РѕР± СѓРІРѕР»СЊРЅРµРЅРёРё:
 --
 select * from uvolnenie;
 
 
 --
--- Создание таблицы сведений о повышении квалификации:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРѕРІС‹С€РµРЅРёРё РєРІР°Р»РёС„РёРєР°С†РёРё:
 -- 
 CREATE TABLE povushkvalif (
     tabnumb                    NUMBER,
@@ -148,30 +148,30 @@ CREATE TABLE povushkvalif (
 );
 
 --
--- Заполнение таблицы сведений о повышении квалификации:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРѕРІС‹С€РµРЅРёРё РєРІР°Р»РёС„РёРєР°С†РёРё:
 -- 
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (3980, '08.12.10', '30.12.10', 'с отрывом от производства', 'Ростовский Институт Повышения Квалификации', 'Плучение новой компетенции', 'удостоверение 55653');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (4817, '12.12.10', '19.12.10', 'с отрывом от производства', 'Харьковский Государственный Институт Управления', 'Согласно плану обучения', 'удостоверение 54971');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (10661, '28.12.10', '31.12.10', 'без отрыва от производства', 'Харьковский Государственный Институт Управления', 'Согласно плану обучения', 'удостоверение 49985');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (11238, '01.12.10', '02.12.10', 'с отрывом от производства', 'Ростовский Институт Повышения Квалификации', 'Планируемый перевод', 'сертификат 96692');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (11908, '25.11.10', '25.12.10', 'с отрывом от производства', 'Харьковский Государственный Институт Управления', 'Плучение новой компетенции', 'сертификат 61311');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12367, '22.01.10', '27.01.10', 'с отрывом от производства', 'Московская Академия ИТ', 'Согласно плану обучения', 'сертификат 11238');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12989, '01.12.09', '05.12.09', 'без отрыва от производства', 'Московская Академия ИТ', 'Зачисление в кадровый резерв ', 'сертификат 51865');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12999, '05.11.09', '25.11.09', 'без отрыва от производства', 'Московская Академия ИТ', 'Планируемый перевод', 'сертификат 83091');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (13948, '09.12.10', '30.12.10', 'без отрыва от производства', 'Московская Академия ИТ', 'Плучение новой компетенции', 'удостоверение 25746');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (14568, '29.12.10', '31.12.10', 'с отрывом от производства', 'Харьковский Государственный Институт Управления', 'Согласно плану обучения', 'сертификат 58710');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (14640, '04.12.10', '14.12.10', 'с отрывом от производства', 'Харьковский Государственный Институт Управления', 'Зачисление в кадровый резерв ', 'сертификат 97633');
-insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (16789, '06.08.09', '06.09.09', 'с отрывом от производства', 'Ростовский Институт Повышения Квалификации', 'Планируемый перевод', 'сертификат 75932');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (3980, '08.12.10', '30.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'Р РѕСЃС‚РѕРІСЃРєРёР№ РРЅСЃС‚РёС‚СѓС‚ РџРѕРІС‹С€РµРЅРёСЏ РљРІР°Р»РёС„РёРєР°С†РёРё', 'РџР»СѓС‡РµРЅРёРµ РЅРѕРІРѕР№ РєРѕРјРїРµС‚РµРЅС†РёРё', 'СѓРґРѕСЃС‚РѕРІРµСЂРµРЅРёРµ 55653');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (4817, '12.12.10', '19.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РҐР°СЂСЊРєРѕРІСЃРєРёР№ Р“РѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ РРЅСЃС‚РёС‚СѓС‚ РЈРїСЂР°РІР»РµРЅРёСЏ', 'РЎРѕРіР»Р°СЃРЅРѕ РїР»Р°РЅСѓ РѕР±СѓС‡РµРЅРёСЏ', 'СѓРґРѕСЃС‚РѕРІРµСЂРµРЅРёРµ 54971');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (10661, '28.12.10', '31.12.10', 'Р±РµР· РѕС‚СЂС‹РІР° РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РҐР°СЂСЊРєРѕРІСЃРєРёР№ Р“РѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ РРЅСЃС‚РёС‚СѓС‚ РЈРїСЂР°РІР»РµРЅРёСЏ', 'РЎРѕРіР»Р°СЃРЅРѕ РїР»Р°РЅСѓ РѕР±СѓС‡РµРЅРёСЏ', 'СѓРґРѕСЃС‚РѕРІРµСЂРµРЅРёРµ 49985');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (11238, '01.12.10', '02.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'Р РѕСЃС‚РѕРІСЃРєРёР№ РРЅСЃС‚РёС‚СѓС‚ РџРѕРІС‹С€РµРЅРёСЏ РљРІР°Р»РёС„РёРєР°С†РёРё', 'РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РїРµСЂРµРІРѕРґ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 96692');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (11908, '25.11.10', '25.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РҐР°СЂСЊРєРѕРІСЃРєРёР№ Р“РѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ РРЅСЃС‚РёС‚СѓС‚ РЈРїСЂР°РІР»РµРЅРёСЏ', 'РџР»СѓС‡РµРЅРёРµ РЅРѕРІРѕР№ РєРѕРјРїРµС‚РµРЅС†РёРё', 'СЃРµСЂС‚РёС„РёРєР°С‚ 61311');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12367, '22.01.10', '27.01.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РњРѕСЃРєРѕРІСЃРєР°СЏ РђРєР°РґРµРјРёСЏ РРў', 'РЎРѕРіР»Р°СЃРЅРѕ РїР»Р°РЅСѓ РѕР±СѓС‡РµРЅРёСЏ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 11238');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12989, '01.12.09', '05.12.09', 'Р±РµР· РѕС‚СЂС‹РІР° РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РњРѕСЃРєРѕРІСЃРєР°СЏ РђРєР°РґРµРјРёСЏ РРў', 'Р—Р°С‡РёСЃР»РµРЅРёРµ РІ РєР°РґСЂРѕРІС‹Р№ СЂРµР·РµСЂРІ ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 51865');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (12999, '05.11.09', '25.11.09', 'Р±РµР· РѕС‚СЂС‹РІР° РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РњРѕСЃРєРѕРІСЃРєР°СЏ РђРєР°РґРµРјРёСЏ РРў', 'РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РїРµСЂРµРІРѕРґ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 83091');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (13948, '09.12.10', '30.12.10', 'Р±РµР· РѕС‚СЂС‹РІР° РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РњРѕСЃРєРѕРІСЃРєР°СЏ РђРєР°РґРµРјРёСЏ РРў', 'РџР»СѓС‡РµРЅРёРµ РЅРѕРІРѕР№ РєРѕРјРїРµС‚РµРЅС†РёРё', 'СѓРґРѕСЃС‚РѕРІРµСЂРµРЅРёРµ 25746');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (14568, '29.12.10', '31.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РҐР°СЂСЊРєРѕРІСЃРєРёР№ Р“РѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ РРЅСЃС‚РёС‚СѓС‚ РЈРїСЂР°РІР»РµРЅРёСЏ', 'РЎРѕРіР»Р°СЃРЅРѕ РїР»Р°РЅСѓ РѕР±СѓС‡РµРЅРёСЏ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 58710');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (14640, '04.12.10', '14.12.10', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'РҐР°СЂСЊРєРѕРІСЃРєРёР№ Р“РѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ РРЅСЃС‚РёС‚СѓС‚ РЈРїСЂР°РІР»РµРЅРёСЏ', 'Р—Р°С‡РёСЃР»РµРЅРёРµ РІ РєР°РґСЂРѕРІС‹Р№ СЂРµР·РµСЂРІ ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 97633');
+insert into povushkvalif (tabnumb, nachaloobuchenia, okonchobuchenia, vidpovushkvalifikaci, naimenovanieobrazuchrezhd, osnovanie, documentpovush) values (16789, '06.08.09', '06.09.09', 'СЃ РѕС‚СЂС‹РІРѕРј РѕС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°', 'Р РѕСЃС‚РѕРІСЃРєРёР№ РРЅСЃС‚РёС‚СѓС‚ РџРѕРІС‹С€РµРЅРёСЏ РљРІР°Р»РёС„РёРєР°С†РёРё', 'РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РїРµСЂРµРІРѕРґ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 75932');
 
 --
--- Вывод всех полей таблицы сведений о повышении квалификации:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРѕРІС‹С€РµРЅРёРё РєРІР°Р»РёС„РёРєР°С†РёРё:
 -- 
 select * from povushkvalif;
 
 
 
 --
--- Создание таблицы сведений о принятии на работу:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїСЂРёРЅСЏС‚РёРё РЅР° СЂР°Р±РѕС‚Сѓ:
 --
 
 CREATE TABLE prinyatie (
@@ -181,7 +181,7 @@ CREATE TABLE prinyatie (
 );
 
 --
--- Заполнение таблицы сведений о принятии на работу:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїСЂРёРЅСЏС‚РёРё РЅР° СЂР°Р±РѕС‚Сѓ:
 --
 insert into prinyatie (tabnumb, pricasnumb, dataprikasa) values (12999, 1112323, '11.06.09');
 insert into prinyatie (tabnumb, pricasnumb, dataprikasa) values (10661, 2321234, '16.04.09');
@@ -189,13 +189,13 @@ insert into prinyatie (tabnumb, pricasnumb, dataprikasa) values (3980, 1232323, 
 insert into prinyatie (tabnumb, pricasnumb, dataprikasa) values (4817, 1231232, '04.02.09');
 
 --
--- Вывод всех полей таблицы сведений о принятии на работу:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїСЂРёРЅСЏС‚РёРё РЅР° СЂР°Р±РѕС‚Сѓ:
 --
 select * from prinyatie;
 
 
 --
--- Создание таблицы сведений о работодателе:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЂР°Р±РѕС‚РѕРґР°С‚РµР»Рµ:
 --
 
 CREATE TABLE rabotodat (
@@ -208,18 +208,18 @@ CREATE TABLE rabotodat (
 
 
 --
--- Заполнение таблицы сведений о работодателе:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЂР°Р±РѕС‚РѕРґР°С‚РµР»Рµ:
 --
-insert into rabotodat (innrabotodat, namefirm, adres, telefon, fiorukovod) values (12345, 'Меркурий', 'г. Новочеркасск, ул. Михайлова, 98', '2-24-21', 'Иванов Иван Иванович');
+insert into rabotodat (innrabotodat, namefirm, adres, telefon, fiorukovod) values (12345, 'РњРµСЂРєСѓСЂРёР№', 'Рі. РќРѕРІРѕС‡РµСЂРєР°СЃСЃРє, СѓР». РњРёС…Р°Р№Р»РѕРІР°, 98', '2-24-21', 'РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡');
 
 
 --
--- Вывод всех полей таблицы сведений о работодателе:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ СЂР°Р±РѕС‚РѕРґР°С‚РµР»Рµ:
 --
 select * from rabotodat;
 
 --
--- Создание таблицы сведений о перемещении в должности
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё РІ РґРѕР»Р¶РЅРѕСЃС‚Рё
 --
 CREATE TABLE peremeshenie (
     tabnumb              NUMBER,
@@ -230,26 +230,26 @@ CREATE TABLE peremeshenie (
 );
 
 --
--- Заполнение таблицы сведений о перемещении в должности
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё РІ РґРѕР»Р¶РЅРѕСЃС‚Рё
 --
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (21234, 1112323, '30.12.10', 'Программист', 'Начальник цеха');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (14568, 2321234, '19.12.10', 'Начальник отдела', 'Водитель');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (12367, 1232323, '31.12.10', 'Программист', 'Механик');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (45678, 1231232, '02.12.10', 'Бухгалтер', 'Кассир');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (34789, 1112323, '25.12.10', 'Главный бухгалтер', 'Слесарь');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (12999, 1112323, '27.01.10', 'Бухгалтер', 'Кассир');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (13948, 2321234, '05.12.09', 'Секретарь', 'Курьер');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (16789, 1232323, '25.11.09', 'Электрик', 'Работник цеха');
-insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (20976, 1231232, '30.12.10', 'Директор', 'Системный администратор');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (21234, 1112323, '30.12.10', 'РџСЂРѕРіСЂР°РјРјРёСЃС‚', 'РќР°С‡Р°Р»СЊРЅРёРє С†РµС…Р°');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (14568, 2321234, '19.12.10', 'РќР°С‡Р°Р»СЊРЅРёРє РѕС‚РґРµР»Р°', 'Р’РѕРґРёС‚РµР»СЊ');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (12367, 1232323, '31.12.10', 'РџСЂРѕРіСЂР°РјРјРёСЃС‚', 'РњРµС…Р°РЅРёРє');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (45678, 1231232, '02.12.10', 'Р‘СѓС…РіР°Р»С‚РµСЂ', 'РљР°СЃСЃРёСЂ');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (34789, 1112323, '25.12.10', 'Р“Р»Р°РІРЅС‹Р№ Р±СѓС…РіР°Р»С‚РµСЂ', 'РЎР»РµСЃР°СЂСЊ');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (12999, 1112323, '27.01.10', 'Р‘СѓС…РіР°Р»С‚РµСЂ', 'РљР°СЃСЃРёСЂ');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (13948, 2321234, '05.12.09', 'РЎРµРєСЂРµС‚Р°СЂСЊ', 'РљСѓСЂСЊРµСЂ');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (16789, 1232323, '25.11.09', 'Р­Р»РµРєС‚СЂРёРє', 'Р Р°Р±РѕС‚РЅРёРє С†РµС…Р°');
+insert into peremeshenie (tabnumb, prikasnumberperem, dataprikasaperemesh, dolgnost, novoemesto) values (20976, 1231232, '30.12.10', 'Р”РёСЂРµРєС‚РѕСЂ', 'РЎРёСЃС‚РµРјРЅС‹Р№ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ');
 
 --
--- Вывод всех полей таблицы сведений о перемещении в должности
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ СЃРІРµРґРµРЅРёР№ Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё РІ РґРѕР»Р¶РЅРѕСЃС‚Рё
 --
 select * from peremeshenie;
 
 
 --
--- Создание таблицы об образовании:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ РѕР± РѕР±СЂР°Р·РѕРІР°РЅРёРё:
 --
 CREATE TABLE obrazovanie (
     tabnumb           NUMBER,
@@ -263,30 +263,30 @@ CREATE TABLE obrazovanie (
 );
 
 --
--- Заполнение таблицы об образовании:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ РѕР± РѕР±СЂР°Р·РѕРІР°РЅРёРё:
 --
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (16789, 'немецкий', 'РИШТ', 'А', 'экономист', 'сертификат 877090', 5, 2);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (14640, 'украинский', 'ЮРГТУ', 'В', 'инженер', 'сертификат 223723', 3, 1);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (14568, 'немецкий', 'ШТИБО', 'А', 'технолог', 'сертификат 336802', 5, 4);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (3980, 'немецкий', 'РГУ', 'А', 'технолог', 'сертификат 225797', 6, 5);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (4817, 'испанский', 'РИШТ', 'А', 'экономист', 'диплом 391550', 7, 3);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (10661, 'немецкий', 'МГУ', 'А', 'экономист', 'диплом 744908', 5, 2);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (11238, 'английский', 'РИНХ', 'А', 'экономист', 'сертификат 094376', 1, 1);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (11908, 'испанский', 'РИНХ', 'С', 'дизайнер', 'диплом 809169', 9, 8);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12367, 'испанский', 'МГУ', 'С', 'технолог', 'диплом 188816', 1, 1);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12989, 'английский', 'РИШТ', 'В', 'технолог', 'аттестат 296276', 9, 7);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12999, 'испанский', 'РИШТ', 'В', 'экономист', 'диплом 976319', 6, 5);
-insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (13948, 'немецкий', 'РИШТ', 'В', 'экономист', 'диплом 084730', 4, 2);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (16789, 'РЅРµРјРµС†РєРёР№', 'Р РРЁРў', 'Рђ', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'СЃРµСЂС‚РёС„РёРєР°С‚ 877090', 5, 2);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (14640, 'СѓРєСЂР°РёРЅСЃРєРёР№', 'Р®Р Р“РўРЈ', 'Р’', 'РёРЅР¶РµРЅРµСЂ', 'СЃРµСЂС‚РёС„РёРєР°С‚ 223723', 3, 1);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (14568, 'РЅРµРјРµС†РєРёР№', 'РЁРўРР‘Рћ', 'Рђ', 'С‚РµС…РЅРѕР»РѕРі', 'СЃРµСЂС‚РёС„РёРєР°С‚ 336802', 5, 4);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (3980, 'РЅРµРјРµС†РєРёР№', 'Р Р“РЈ', 'Рђ', 'С‚РµС…РЅРѕР»РѕРі', 'СЃРµСЂС‚РёС„РёРєР°С‚ 225797', 6, 5);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (4817, 'РёСЃРїР°РЅСЃРєРёР№', 'Р РРЁРў', 'Рђ', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'РґРёРїР»РѕРј 391550', 7, 3);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (10661, 'РЅРµРјРµС†РєРёР№', 'РњР“РЈ', 'Рђ', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'РґРёРїР»РѕРј 744908', 5, 2);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (11238, 'Р°РЅРіР»РёР№СЃРєРёР№', 'Р РРќРҐ', 'Рђ', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'СЃРµСЂС‚РёС„РёРєР°С‚ 094376', 1, 1);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (11908, 'РёСЃРїР°РЅСЃРєРёР№', 'Р РРќРҐ', 'РЎ', 'РґРёР·Р°Р№РЅРµСЂ', 'РґРёРїР»РѕРј 809169', 9, 8);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12367, 'РёСЃРїР°РЅСЃРєРёР№', 'РњР“РЈ', 'РЎ', 'С‚РµС…РЅРѕР»РѕРі', 'РґРёРїР»РѕРј 188816', 1, 1);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12989, 'Р°РЅРіР»РёР№СЃРєРёР№', 'Р РРЁРў', 'Р’', 'С‚РµС…РЅРѕР»РѕРі', 'Р°С‚С‚РµСЃС‚Р°С‚ 296276', 9, 7);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (12999, 'РёСЃРїР°РЅСЃРєРёР№', 'Р РРЁРў', 'Р’', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'РґРёРїР»РѕРј 976319', 6, 5);
+insert into obrazovanie (tabnumb, knowforenglang, namevuz, kvalifikacia, professia, docaboutstudy, stagworkobshi, stagworknepreruv) values (13948, 'РЅРµРјРµС†РєРёР№', 'Р РРЁРў', 'Р’', 'СЌРєРѕРЅРѕРјРёСЃС‚', 'РґРёРїР»РѕРј 084730', 4, 2);
 
 --
--- Вывод всех полей таблицы об образовании
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ РѕР± РѕР±СЂР°Р·РѕРІР°РЅРёРё
 --
 select * from obrazovanie;
 
 
 
 --
--- Создание таблицы о воинском учете:
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ Рѕ РІРѕРёРЅСЃРєРѕРј СѓС‡РµС‚Рµ:
 --
 CREATE TABLE voinskuchet (
     tabnumb                   NUMBER UNIQUE,
@@ -295,26 +295,26 @@ CREATE TABLE voinskuchet (
     kategoriazapasa           VARCHAR2(250),
     kategoriagodnosti         CHAR(15) CHECK ( kategoriagodnosti IN ( 'A', 'B', 'C' ) ),
     naimenkommisspozhitelstv  VARCHAR2(250),
-    voinskiiuchet             CHAR(15) CHECK ( voinskiiuchet IN ( 'общий', 'специальный' ) ),
-    otmetkasnyatiaucheta      CHAR(50) CHECK ( otmetkasnyatiaucheta IN ( 'снят с воинского учета', 'не снят с воинского учета' ) )
+    voinskiiuchet             CHAR(15) CHECK ( voinskiiuchet IN ( 'РѕР±С‰РёР№', 'СЃРїРµС†РёР°Р»СЊРЅС‹Р№' ) ),
+    otmetkasnyatiaucheta      CHAR(50) CHECK ( otmetkasnyatiaucheta IN ( 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°', 'РЅРµ СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°' ) )
 );
 
 --
--- Заполнение таблицы о воинском учете:
+-- Р—Р°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС†С‹ Рѕ РІРѕРёРЅСЃРєРѕРј СѓС‡РµС‚Рµ:
 --
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (34789, 'рядовой', '111111', 2, 'C ', 'военкомат Абинского района Краснодарского края', 'общий ', 'не снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (37130, 'лейтенант', '222222', 2, 'C ', 'военкомат Абинского района Краснодарского края', 'общий ', 'не снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (47857, 'рядовой', '333333', 2, 'B ', 'военкомат Абинского района Краснодарского края', 'общий ', 'не снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (71094, 'рядовой', '444444', 2, 'A ', 'военкомат Октябрьского района Ростовской области', 'общий ', 'не снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (3980, 'сержант', '555555', 1, 'A ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (4817, 'старший сержант', '666666', 1, 'A ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (11238, 'лейтенант', '777777', 1, 'A ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (11908, 'старший сержант', '888888', 1, 'A ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (12367, 'лейтенант', '111111', 1, 'A ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
-insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (12989, 'старший сержант', '222222', 2, 'C ', 'военкомат Морозовского района Ростовской области', 'общий ', 'снят с воинского учета');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (34789, 'СЂСЏРґРѕРІРѕР№', '111111', 2, 'C ', 'РІРѕРµРЅРєРѕРјР°С‚ РђР±РёРЅСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° РљСЂР°СЃРЅРѕРґР°СЂСЃРєРѕРіРѕ РєСЂР°СЏ', 'РѕР±С‰РёР№ ', 'РЅРµ СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (37130, 'Р»РµР№С‚РµРЅР°РЅС‚', '222222', 2, 'C ', 'РІРѕРµРЅРєРѕРјР°С‚ РђР±РёРЅСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° РљСЂР°СЃРЅРѕРґР°СЂСЃРєРѕРіРѕ РєСЂР°СЏ', 'РѕР±С‰РёР№ ', 'РЅРµ СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (47857, 'СЂСЏРґРѕРІРѕР№', '333333', 2, 'B ', 'РІРѕРµРЅРєРѕРјР°С‚ РђР±РёРЅСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° РљСЂР°СЃРЅРѕРґР°СЂСЃРєРѕРіРѕ РєСЂР°СЏ', 'РѕР±С‰РёР№ ', 'РЅРµ СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (71094, 'СЂСЏРґРѕРІРѕР№', '444444', 2, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РћРєС‚СЏР±СЂСЊСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'РЅРµ СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (3980, 'СЃРµСЂР¶Р°РЅС‚', '555555', 1, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (4817, 'СЃС‚Р°СЂС€РёР№ СЃРµСЂР¶Р°РЅС‚', '666666', 1, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (11238, 'Р»РµР№С‚РµРЅР°РЅС‚', '777777', 1, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (11908, 'СЃС‚Р°СЂС€РёР№ СЃРµСЂР¶Р°РЅС‚', '888888', 1, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (12367, 'Р»РµР№С‚РµРЅР°РЅС‚', '111111', 1, 'A ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
+insert into voinskuchet (tabnumb, voinskoezvanie, kodovoeoboznvus, kategoriazapasa, kategoriagodnosti, naimenkommisspozhitelstv, voinskiiuchet, otmetkasnyatiaucheta) values (12989, 'СЃС‚Р°СЂС€РёР№ СЃРµСЂР¶Р°РЅС‚', '222222', 2, 'C ', 'РІРѕРµРЅРєРѕРјР°С‚ РњРѕСЂРѕР·РѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Р РѕСЃС‚РѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё', 'РѕР±С‰РёР№ ', 'СЃРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р°');
 
 --
--- Вывод всех полей таблицы о воинском учете:
+-- Р’С‹РІРѕРґ РІСЃРµС… РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹ Рѕ РІРѕРёРЅСЃРєРѕРј СѓС‡РµС‚Рµ:
 --
 select * from voinskuchet;
 
